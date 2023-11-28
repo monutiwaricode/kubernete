@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: monu
+spec:
+  containers:
+  - name: monu
+    image: monutiwaricode/nginx-ubuntu
+    ports:
+    - containerPort: 82
+    envFrom:
+    -configMapRef:
+    name: example-configmap
